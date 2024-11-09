@@ -15,17 +15,14 @@ namespace HW11.Services
         IProductsRepository productRep;
         public ProductsService()
         {
-            productRep = new ProductsRepository();
+            productRep = new ProductRepositoryEF();
         }
         public Result CreateProduct(Products product)
         {
-            if (productRep.GetProduct(product.Id) == null)
-            {
                 productRep.CreateProduct(product);
                 return new Result(true, "Product added successfully.");
-            }
-            else
-                return new Result(false, "The product is already registered.");
+            
+        
          
         }
         public List<GetProductDto> GetAllProducts()

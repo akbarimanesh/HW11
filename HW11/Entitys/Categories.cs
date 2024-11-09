@@ -9,8 +9,8 @@ namespace HW11.Entitys
     public class Categories
     {
         public int Id { get; set; }
-        public int Name { get; set; }
-
+        public string Name { get; set; }
+        public List<Products> Products { get; set; }
 
     }
 }

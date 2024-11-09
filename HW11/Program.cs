@@ -77,7 +77,7 @@ void CreateProduct()
         ColoredConsole.Write($"{Blue("Please Enter Price :")}");
         int price = int.Parse(Console.ReadLine());
         products.Name = name;
-        products.CategoryId = categoryid;
+        products.CategoriesId = categoryid;
         products.Price = price;
         var result = productsService.CreateProduct(products);
         if (result.Isuccess)
@@ -100,9 +100,9 @@ void CreateProduct()
     catch(Exception ex)
     {
         ColoredConsole.WriteLine($"{Red("Please complete the form.")}");
-        
+
         Console.ReadKey();
-      
+
 
 
     }
@@ -162,7 +162,7 @@ void Updateproduct()
         int price = int.Parse(Console.ReadLine());
         products.Id = id;
         products.Name = name;
-        products.CategoryId = categoryid;
+        products.CategoriesId = categoryid;
         products.Price = price;
         var result = productsService.UpdateProduct(products);
         if (result.Isuccess)

@@ -22,7 +22,7 @@ namespace HW11.Repository
         {
             using (IDbConnection con = new SqlConnection(Counfiguer.Connectionstring))
             {
-                con.Execute(QuerysShopdb.CreateProduct, new { Name = product.Name, CategoryId = product.CategoryId, Price = product.Price });
+                con.Execute(QuerysShopdb.CreateProduct, new { Name = product.Name, CategoryId = product.CategoriesId, Price = product.Price });
 
             }
 
@@ -45,7 +45,7 @@ namespace HW11.Repository
                 return con.QueryFirstOrDefault<GetProductDto>(QuerysShopdb.GetProductById, new { Id = id });
               
             }
-            return null;
+           
         }
 
         public List<GetProductDto> GetAllProducts()
@@ -62,7 +62,7 @@ namespace HW11.Repository
         {
             using (IDbConnection con = new SqlConnection(Counfiguer.Connectionstring))
             {
-                con.Execute(QuerysShopdb.UpdateProduct, new {Id=product.Id, Name=product.Name, CategoryId=product.CategoryId, Price=product.Price });
+                con.Execute(QuerysShopdb.UpdateProduct, new {Id=product.Id, Name=product.Name, CategoryId=product.CategoriesId, Price=product.Price });
 
             }
         }

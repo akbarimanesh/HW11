@@ -11,7 +11,7 @@ namespace HW11
         public static string Connectionstring { get; set; }
         static Counfiguer()
         {
-            Connectionstring = @"Data Source=LEILI\LEILA;Initial Catalog=ShopDb;Integrated Security=true;";
+            Connectionstring = @"Data Source=LEILI\LEILA;Initial Catalog=ShopDbE;Integrated Security=true; TrustServerCertificate=True";
         }
     }
 }

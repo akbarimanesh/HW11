@@ -13,6 +13,7 @@ namespace HW11.Entitys
         public int Price { get; set; }
              
        // public  string ? CategoryName { get; set; }
-        public int CategoryId { get; set; }
+        public int CategoriesId { get; set; }
+        public Categories Categories { get; set; }
     }
 }
